@@ -34,9 +34,9 @@ function draw() {
 
     var val = myTable.getNum(i, "Defense");
 
-    var xpos = map(i, 0, myTable.getRowCount(), 0, random(width));
+    var xpos = map(i, 0, myTable.getRowCount(), 0, width);
 
-    var ypos = map(val, minDefense, maxDefense, height, 0);
+    var ypos = map(val, minDefense, maxDefense, random(height), 0);
     stroke(random(255),random(255),random(255));
     noFill();
     strokeWeight(1);
@@ -55,7 +55,7 @@ function draw() {
     var xpos2 = map(i, 0, myTable.getRowCount(), 0, width);
 
     var ypos2 = map(val, minAttack, maxAttack, height, 0);
-    stroke(255);
+    stroke("yellow");
     strokeWeight(random(3));
     point(xpos2, ypos2);
   }
